@@ -1,0 +1,9 @@
+import numpy as np
+import pandas as pd
+
+f = lambda x: x*10
+map_f = lambda x: list(map(f, x))
+
+panel = np.arange(1000).reshape(10,10,10)
+df = pd.DataFrame.from_records(panel)
+df2 = df.applymap(map_f)
